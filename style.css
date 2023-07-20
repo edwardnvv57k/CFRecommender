@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #390832;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    z-index: -1;
+}
+
+main.table {
+    width: 82vw;
+    height: 90vh;
+    background-color: #fff5;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 0.4rem 0.8rem #0005;
+    border-radius: 0.8rem;
+    overflow: hidden;
+}
+
+.table_header {
+    height: 10%;
+    width: 100%;
+    background-color: #fff4;
+    padding: 0.8rem 1rem;
+}
+
+.table_body {
+    width: 95%;
+    height: calc(89% - 1.6rem);
+    word-wrap: break-word;
+    background-color: #fffb;
+
+    margin: 0.8rem auto;
+    border-radius: 0.6rem;
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: left;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #d5d1defe;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #d5d1defe;
+}
+
+tbody tr:hover {
+    background-color: #fff6;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    padding: 0.15rem 0.3rem;
+    border-radius: 0.8rem;
+    border: 2px solid black;
+    text-align: center;
+}
+
+/* .tags {
+    display: flex;
+} */
+
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    font-weight: 600;
+}
+
+.tag {
+    background-color: wheat;
+    display: inline-block;
+    padding: 0.2rem 0.3rem;
+    margin: 3px;
+    border-radius: 0.8rem;
+    border: 1.5px solid black;
+    text-align: center;
+}
+
+.rating.newbie {
+    background-color: gray;
+    color: black;
+}
+.rating.pupil {
+    background-color: green;
+    color: darkkhaki;
+}
+
+.rating.specialist {
+    background-color: #03a89e;
+    color: slateblue;
+}
+
+.rating.expert {
+    background-color: blue;
+    color: lightblue;
+}
+
+.rating.cm {
+    background-color: #a0a;
+    color: #d5d1defe;
+}
+
+.rating.master {
+    background-color: #ff8c00;
+    color: gold;
+}
+
+.rating.gm {
+    background-color: red;
+    color: lightpink;
+}
+
+.rating.lgm {
+    background-color: #1B1212;
+    color: red;
+}
+
+@media (max-width: 1000px) {
+    td:last-of-type {
+        min-width: 30rem;
+    }
+}
